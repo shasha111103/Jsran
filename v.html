@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #FFD1DC; /* Soft pink for a cute vibe */
+            font-family: 'Comic Sans MS', 'Segoe UI', sans-serif; /* Fun, cute font */
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #f h1 {
+            color: #FF69B4;
+            font-size: 50px;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.6);
+        }
+
+        img {
+            width: 300px; /* Resize to fit the screen better */
+            height: auto;
+            border-radius: 20px; /* Rounded edges */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            margin: 20px auto;
+            display: block; /* Centering the image */
+        }
+
+        #s {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between buttons */
+            margin: 20px 0;
+        }
+
+        button {
+            height: 50px;
+            width: 120px;
+            border: none;
+            background-color: #FF69B4;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+            transition: transform 0.2s ease-in-out, background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #FF1493; /* Darker pink on hover */
+            transform: scale(1.1); /* Slight zoom-in effect */
+        }
+
+        #msg {
+            font-size: 24px;
+            color: #FF69B4;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="f">
+        <h1>Will You Be My Valentine?</h1>
+    </div>
+    <img id="h" src="C:\Users\jaspr\New folder\h1.png" alt="Valentine's image">
+    <div id="s">
+        <button id="ha" onclick="happy();">YES</button>
+        <button onclick="sad();">NO</button>
+    </div>
+    <h3 id="msg"></h3>
+    <script>
+        function sad() {
+            document.querySelector('#h').src = 'hs.jpeg';
+            document.querySelector('#msg').innerHTML = "You broke my heart! Don't you love me like I do?";
+        }
+        function happy() {
+            document.querySelector('#h').src = 'download.jpeg';
+            document.querySelector('#msg').innerHTML = 'It’s a yes!';
+        }
+    </script>
+</body>
+</html>
